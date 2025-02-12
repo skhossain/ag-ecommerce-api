@@ -1,4 +1,3 @@
-
 # Agriget E-commerce Backend
 
 ## Getting Started
@@ -9,8 +8,9 @@ Follow these steps to pull and install the project.
 
 Make sure you have the following installed on your machine:
 - Git
-- Node.js
-- npm (Node Package Manager)
+- PHP
+- Composer
+- MySQL
 
 ### Installation
 
@@ -26,39 +26,47 @@ Make sure you have the following installed on your machine:
 
 3. **Install the dependencies:**
     ```sh
-    npm install
+    composer install
     ```
 
 4. **Set up environment variables:**
-    Create a `.env` file in the root directory and add the necessary environment variables. Refer to `.env.example` for the required variables.
-
-5. **Run database migrations (if applicable):**
+    Copy the `.env.example` file to `.env` and update the necessary environment variables.
     ```sh
-    npm run migrate
+    cp .env.example .env
     ```
 
-6. **Start the development server:**
+5. **Generate an application key:**
     ```sh
-    npm run dev
+    php artisan key:generate
+    ```
+
+6. **Run database migrations:**
+    ```sh
+    php artisan migrate
+    ```
+
+7. **Start the development server:**
+    ```sh
+    php artisan serve
     ```
 
 ### Running Tests
 
 To run the tests, use the following command:
 ```sh
-npm test
+php artisan test
 ```
 
 ### Additional Scripts
 
-- **Build the project:**
+- **Clear application cache:**
     ```sh
-    npm run build
+    php artisan cache:clear
     ```
 
-- **Lint the code:**
+- **Optimize the application:**
     ```sh
-    npm run lint
+    php artisan optimize
     ```
 
 ### Contributing
