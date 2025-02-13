@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [env('FRONTEND_URL', 'http://localhost:3000','https://ag-ecom.deviceinfotech.com')],
+    'allowed_origins' => [env('FRONTEND_URL', 'http://localhost:3000'),'https://ag-ecom.deviceinfotech.com'],
 
     'allowed_origins_patterns' => [],
 
