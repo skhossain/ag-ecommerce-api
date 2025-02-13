@@ -65,7 +65,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'price' => $request->price,
             'category_id' => $request->category_id,
-            'image_url' => asset("storage/{$imagePath}"), // Store full image URL
+            'image_url' => "storage/{$imagePath}",
             'status' => $request->status,
         ]);
     
